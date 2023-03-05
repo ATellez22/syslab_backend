@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Box_of_movement extends Model
 {
     use HasFactory;
+
+    public function Box() {
+        return $this->belongsTo(Box::class);
+    }
+
 }

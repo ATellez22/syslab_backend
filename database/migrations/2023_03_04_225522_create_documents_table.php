@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre', 100);
+            $table->string('codigo', 100);
+            $table->integer('state')->default(1);
             $table->timestamps();
         });
     }

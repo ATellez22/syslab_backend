@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->string('path', 255);
+            $table->integer('total');
+            $table->integer('payment'); //Pago
+            $table->integer('change'); //Cambio
+            $table->integer('type');
+            $table->text('reason'); //Motivo
+            $table->string('costumer'); //Cliente
             $table->integer('state')->default(1);
             $table->timestamps();
         });
@@ -24,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('images');
+        Schema::dropIfExists('sales');
     }
 };

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('series', function (Blueprint $table) {
             $table->id();
+            $table->string('serie', 255);
+            $table->foreignId('voucher_id')->constrained('vouchers')->onUpdate('cascade')->onDelete('restrict');
+            $table->integer('state')->default(1);
             $table->timestamps();
         });
     }

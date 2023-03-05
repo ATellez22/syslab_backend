@@ -11,4 +11,8 @@ class Pattern extends Model
 
     //Pattern = Modelo (Para no utilizar 'Model'. Relacionado con Articulos)
 
+    public function Brand() {
+        return $this->belongsTo(Brand::class);
+    }
+
 }
