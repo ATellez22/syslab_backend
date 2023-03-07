@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('measures', function (Blueprint $table) {
             $table->id();
             $table->string('description')->nullable();
+            $table->string('code')->nullable();
             $table->integer('state')->default(1);
             $table->timestamps();
         });
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('measures');
+        //
     }
 };
