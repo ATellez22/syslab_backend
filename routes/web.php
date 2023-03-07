@@ -6,7 +6,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('/api/articles', 'ArticleController');
-Route::apiResource('/api/brands', 'BrandController');
-Route::apiResource('/api/measures', 'MeasureController');
-Route::apiResource('/api/categories', 'CategoryController');
+Route::group(['prefix'=>'api'],function(){
+    Route::apiResource('/brands', 'BrandController');
+    Route::apiResource('/measures', 'MeasureController');
+    Route::apiResource('/categories', 'CategoryController');
+    Route::apiResource('/documents', 'DocumentController');
+    Route::apiResource('/articles', 'ArticleController');
+});
+
+
