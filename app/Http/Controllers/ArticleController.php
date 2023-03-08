@@ -7,43 +7,58 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        return ['articulos'];
+        return Article::with(['Brand', 'Measure', 'Category'])
+                        ->where('state', 1)->get();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request)
     {
-        //
+        $article = new Article();
+        $article->barcode = $request->barcode;
+        $article->description = $request->description;
+        $article->price = $request->price;
+        $article->purchase_price = $request->purchase_price;
+        $article->brand_id = $request->brand_id;
+        $article->category_id = $request->category_id;
+        $article->measure_id = $request->measure_id;
+        $article->minimum_stock = $request->minimum_stock;
+        $article->save();
+        return $article;
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Article $article)
     {
-        //
+        $article->brand_id = $article->Brand;
+        $article->measure_id = $article->Measure;
+        $article->category_id = $article->Category;
+        return $article;
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, Article $article)
     {
-        //
+        $article->barcode = $request->barcode;
+        $article->description = $request->description;
+        $article->price = $request->price;
+        $article->purchase_price = $request->purchase_price;
+        $article->brand_id = $request->brand_id;
+        $article->category_id = $request->category_id;
+        $article->measure_id = $request->measure_id;
+        $article->minimum_stock = $request->minimum_stock;
+        $article->save();
+        return $article;
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(Article $article)
     {
-        //
+        $article->state = 0;
+        $article->save();
+        return $article;
     }
 }

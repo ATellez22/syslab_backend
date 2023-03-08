@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\Return_;
 
 class BrandController extends Controller
 {
