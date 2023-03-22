@@ -20,7 +20,8 @@ class BrandsSeeder extends Seeder
         	'DE LA COSTA',
             'MUNICH',
             'BENGALA',
-        	'BUDWEISER'
+        	'BUDWEISER',
+            'KOLKE'
         ];
 
         Brand::truncate();

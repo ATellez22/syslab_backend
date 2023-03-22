@@ -11,7 +11,7 @@ class ArticleController extends Controller
     public function index()
     {
         return Article::with(['Brand', 'Measure', 'Category'])
-                        ->where('state', 1)->get();
+            ->where('state', 1)->get();
     }
 
 
@@ -33,10 +33,12 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
-        $article->brand_id = $article->Brand;
-        $article->measure_id = $article->Measure;
-        $article->category_id = $article->Category;
+        // $article->brand_id = $article->Brand;
+        // $article->measure_id = $article->Measure;
+        // $article->category_id = $article->Category;
+
         return $article;
+
     }
 
 

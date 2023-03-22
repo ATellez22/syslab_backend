@@ -22,10 +22,10 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained('categories')->onUpdate('cascade')->onDelete('restrict');
             //$table->foreignId('subcategory_id')->constrained('subcategories')->onUpdate('cascade')->onDelete('restrict');
             $table->foreignId('measure_id')->constrained('measures')->onUpdate('cascade')->onDelete('restrict');
-            //$table->integer('taxrule');
-            //$table->integer('currency');
+            //$table->integer('taxrule'); //Impuesto
+            //$table->integer('currency'); //Moneda
             //$table->integer('presentation');
-            //$table->integer('supplier');
+            //$table->integer('supplier'); //Proveedor
             //$table->string('image');
             $table->decimal('minimum_stock', 8, 2)->nullable();
             $table->integer('state')->default(1);

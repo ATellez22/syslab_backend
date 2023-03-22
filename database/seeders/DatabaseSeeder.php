@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             MethodOfPaymentSeeder::class,
             DistrictsSeeder::class,
             BrandsSeeder::class,
+            CategorySeeder::class,
+            MeasureSeeder::class
         ]);
     }
 }
