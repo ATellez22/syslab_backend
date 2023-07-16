@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class MeasureController extends Controller
 {
-
+    //Unidad de medida
     public function index()
     {
         return Measure::where('state', 1)->get();

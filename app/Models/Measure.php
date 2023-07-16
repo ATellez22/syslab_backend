@@ -9,5 +9,5 @@ class Measure extends Model
 {
     use HasFactory;
 
-    //Measure = Medida (Relacionado con articulos)
+    //Measure = Medida o Unidad de medida (Relacionado con articulos)
 }
