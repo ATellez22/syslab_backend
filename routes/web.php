@@ -23,6 +23,7 @@ Route::group(['prefix'=>'api'],function(){
     Route::get('/inventories/kardex/{article}', 'InventoryController@kardex');
     //Se utiliza en 'modules/kardex/_id' de Nuxt para listar los datos del articulo y llenar el v-model.
 
+    Route::apiResource('/purchases', 'PurchaseController');
 
 });
 

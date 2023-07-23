@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('inventories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('article_id')->constrained('articles')->onUpdate('cascade')->onDelete('restrict');
-            $table->integer('price');
-            $table->integer('purchase_price');
+            $table->integer('sale');
+            $table->integer('purchase');
             $table->integer('quantity');
             $table->integer('type');
             $table->text('reason');

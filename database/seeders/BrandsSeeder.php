@@ -13,6 +13,7 @@ class BrandsSeeder extends Seeder
     public function run(): void
     {
         $brand_list = [
+            'PRODUCTO INTERNO',
         	'PARMALAT',
             'STABILO',
             'OCEAN',

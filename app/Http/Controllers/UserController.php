@@ -73,8 +73,10 @@ class UserController extends Controller
     //Haciendo uso del Request personalizado
     public function login(LoginFormRequest $request, User $user)
     {
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], false)()) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], false)) {
+
             $user = Auth::user();
+
             return $user;
         } else {
             return response()->json(['error' => ['login' => ['Datos no válidos']]]);

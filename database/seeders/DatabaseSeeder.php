@@ -22,7 +22,9 @@ class DatabaseSeeder extends Seeder
             DistrictsSeeder::class,
             BrandsSeeder::class,
             CategorySeeder::class,
-            MeasureSeeder::class
+            MeasureSeeder::class,
+
+            ArticlesSeeder::class
         ]);
     }
 }

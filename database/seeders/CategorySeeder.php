@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $category_list = [
-        	'JUGUETES', 'LIMPIEZA', 'LACTEOS', 'ELECTRÓNICA',
+        	'PANIFICADOS', 'JUGUETES', 'LIMPIEZA', 'LACTEOS', 'ELECTRÓNICA',
         	'INFORMÁTICA', 'BEBIDAS', 'CARNES',
         	'EMBUTIDOS'
         ];

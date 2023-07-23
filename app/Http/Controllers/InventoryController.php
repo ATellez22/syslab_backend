@@ -50,8 +50,8 @@ class InventoryController extends Controller
     {
         $inventory = new Inventory();
         $inventory->article_id = $request->article_id;
-        $inventory->purchase = $request->purchase;
         $inventory->sale = $request->sale;
+        $inventory->purchase = $request->purchase;
         $inventory->quantity = $request->quantity;
         $inventory->type = $request->type;
         $inventory->reason = $request->reason;

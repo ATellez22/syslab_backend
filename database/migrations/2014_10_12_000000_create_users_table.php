@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('username')->nullable();
             $table->string('email')->unique(); //No repetido
             $table->string('password');
-            $table->integer('type')->default(1); //Usuario-Administrador
-            $table->integer('state'); //Activo-Inactivo
+            //$table->integer('type'); //Usuario-Administrador
+            $table->integer('state')->default(1);
             $table->timestamps();
         });
     }
